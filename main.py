@@ -11,9 +11,14 @@ from linebot.models import (
     MessageEvent, TextMessage, TextSendMessage,
 )
 import os
+import sys
+#from account_response import Response
+
 # 共通変数_辞書
 app = Flask(__name__)
 #from flask import current_app as app
+#インスタンス生成
+#res=Response()
 
 #環境変数取得
 # LINE Developersで設定されているアクセストークンとChannel Secretをを取得し、設定します。
@@ -58,7 +63,11 @@ def handle_message(event):
     # text = event.message.text
     #if ('レストラン' in text or 'ランチ' in text or 'ディナー' in text or '食べ物' in text) and ('おすすめ' in text or '教えて' in text):
     #else:
-    line_bot_api.reply_message(
+#    line_bot_api.reply_message(
+#    event.reply_token,
+#    TextSendMessage(text=os.environ[res.getResponse(event.message.text)])
+#    ) #ここでオウム返しのメッセージを返す。
+   line_bot_api.reply_message(
         event.reply_token,
         TextSendMessage(text=event.message.text)) #ここでオウム返しのメッセージを返す。
 
