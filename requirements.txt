@@ -2,7 +2,7 @@ astroid==2.2.5
 certifi==2019.6.16
 chardet==3.0.4
 Click==7.0
-Django==1.11.21
+Django==2.2.24
 Flask==1.0.3
 future==0.17.1
 idna==2.8
